@@ -1,3 +1,5 @@
+cd "$(dirname "$0")" || exit 1
+
 MAIN=main.cpp
 APP=main
 
@@ -8,5 +10,3 @@ fi
 g++ $MAIN -o $APP
 
 ./$APP
-
-
