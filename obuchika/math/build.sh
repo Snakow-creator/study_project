@@ -1,12 +1,17 @@
+#!/bin/bash
+
 cd "$(dirname "$0")" || exit 1
+
+set -e
 
 APP=main
 
-rm -f $APP
+rm -f "$APP"
 
-export LANG=ru_RU.UTF-8
-export LC_ALL=ru_RU.UTF-8
+g++ -std=c++17 -fexec-charset=utf-8 \
+    main.cpp \
+    items_func.cpp \
+    menu_items.cpp \
+    -o "$APP"
 
-g++ -fexec-charset=utf-8 main.cpp -o $APP
-
-./$APP
+./"$APP"

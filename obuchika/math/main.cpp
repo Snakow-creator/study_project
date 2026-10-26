@@ -1,22 +1,6 @@
-#include <clocale>
-#include <iostream>
-
-#include "main.hpp"
-
-using namespace std;
+#include "menu_items.hpp"
 
 int main() {
-    char choise;
-
-    do {
-        cout << "Обучайка приветствует меня, мой юный ученик!" << endl;
-        // cout << "Выбери какой дисциплинной ты хочешь заниматься:" << endl;
-        cout << "1. Хочу учиться! Обучи меня!" << endl;
-        cout << "0. Я спать.. (выход)" << endl;
-
-        cin >> choise;
-
-    } while (true);
-
+    ITeacher::show_menu(&ITeacher::MAIN);
     return 0;
 }
