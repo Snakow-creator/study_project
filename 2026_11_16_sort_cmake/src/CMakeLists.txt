@@ -1,3 +1,5 @@
-cmake_minimum_required(VERSION 3.16)
-project(MySorting)
-add_executable(${PROJECT_NAME} main.cpp)
+file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS
+    "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp"
+)
+
+add_library(${PROG_LIBRARY} STATIC ${SOURCES})
